@@ -1,10 +1,11 @@
 body {
-    background: burlywood;
+    background: radial-gradient(#fdbb2d, #22c1c3);  
     font-family: 'Arial', sans-serif;
     /*background-color: #f7f7f7;*/
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     margin: 0;
   }
@@ -68,14 +69,16 @@ body {
 }
 
 .pagina{
-    /*border: black solid;*/
-    color: black;
-    text-decoration: none;
-    font-size: 1em;
-    text-align: center;
-    
+  border: solid;
+  background-color: orange;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1em;
+  color: black;
 }
-.container #link{
-    border: black solid;
-    color: blueviolet;
+
+.hv{  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
