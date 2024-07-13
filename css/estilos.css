@@ -1,13 +1,74 @@
+@keyframes gatito{
+  0%{top:-300px}
+  50%{top:-200px}
+  60%{top:-100px}
+  80%{top:-50px}
+  100%{top:-0px} 
+}
+
+.animacion{
+  /* alternate sirve para hacer la animacion en ambos sentidos */
+  animation: gatito 2 20s alternate;
+  /* animation: gatito 2 20s forwards; para que se quede estatico cuando termina la animacion*/
+  position: absolute;
+  left: 3%;
+  top: -480px;
+  width: 50%; 
+  height: 50%;
+}
+
+.animacion1{
+  /* alternate sirve para hacer la animacion en ambos sentidos */
+  animation: gatito 2 20s alternate;
+  /* animation: gatito 2 20s forwards; para que se quede estatico cuando termina la animacion*/
+  position: absolute;
+  right: 3%;
+  top: -380px;
+  width: 20%; 
+}
+
+.regreso{
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: black solid;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+img{
+  width: 50%;
+  height: 50%;
+  opacity: 55%;
+}
+
 body {
-    background: radial-gradient(#fdbb2d, #22c1c3);  
+    background: url("fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 90vh; 
+
+      
     font-family: 'Arial', sans-serif;
     /*background-color: #f7f7f7;*/
     display: flex;
     justify-content:space-around;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
-    margin: 0;
+    /* height: 90vh;
+    margin: 0; */
+    
   }
   
   .container {
@@ -41,7 +102,7 @@ body {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease;
   }
   
   .option:hover {
@@ -69,12 +130,14 @@ body {
 }
 
 .pagina{
-  border: solid;
+  border: black solid;
   background-color: orange;
-  border-radius: 10px;
+  border-radius: 3.5em;
   text-decoration: none;
   font-size: 1em;
-  color: black;
+  color: darkblue;
+  padding: 10%;
+  width: 100%;
 }
 
 .hv{  
