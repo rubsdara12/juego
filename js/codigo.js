@@ -13,7 +13,19 @@ $("#limpiar").on("click",function(){
   delete localStorage.usuario;
 });
 
-cerrar.addEventListener('click',function(){
+// const marcador = document.getElementById("Marcador");
+// marcador.addEventListener("click", function() {
+//   //let resultado= "nombre="+localStorage.getItem("usuario")+"&resultado="+gana;
+//     // alert (datos);
+//     $.ajax({
+//       //method: "POST",
+//       url: "datos.php",
+//       data: datos,
+//     })
+// }
+
+
+  cerrar.addEventListener('click',function(){
   usuario= document.getElementById("nombre").value;
   localStorage.setItem("usuario", usuario);
   captura.close();
