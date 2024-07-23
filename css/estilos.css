@@ -1,4 +1,4 @@
-@keyframes gatito{
+@keyframes vertical{
   0%{top:-300px}
   20%{top:-200px}
   40%{top:-100px}
@@ -9,24 +9,34 @@
   100%{top:1000px} 
   100%{top:200px} 
   100%{top:300px} 
-  100%{top:420px} 
+  100%{top:400px} 
+}
+
+@keyframes rotacion {
+  from{
+      transform: rotateY(180deg);
+  }
+  to {
+      transform: rotateY(-180deg);   
+  }
 }
 
 .animacion{
   /* alternate sirve para hacer la animacion en ambos sentidos */
-  animation: gatito 3 10s alternate;
-  /* animation: gatito 2 20s forwards; para que se quede estatico cuando termina la animacion*/
+  /* animation: vertical 3 10s alternate; */
+  animation: rotacion linear infinite 5s;
+  /* animation: vertical 2 20s forwards; para que se quede estatico cuando termina la animacion*/
   position: absolute;
-  left: 3%;
-  top: -480px;
-  width: 50%; 
-  height: 50%;
+  left: 1%;
+  top: 0px; 
+  /* width: 20%;  */
+  /* height: 40%; */
 }
 
 .animacion1{
   /* alternate sirve para hacer la animacion en ambos sentidos */
-  animation: gatito 3 10s alternate;
-  /* animation: gatito 2 20s forwards; para que se quede estatico cuando termina la animacion*/
+  animation: vertical 3 10s alternate;
+  /* animation: vertical 2 20s forwards; para que se quede estatico cuando termina la animacion*/
   position: absolute;
   right: 3%;
   top: -380px;

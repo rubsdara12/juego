@@ -10,13 +10,22 @@
 </head>
 <body>
 <h1>PROYECTO FINAL DESARROLLO FULL STACK</h1>
-
   <div class="hv">
     <a class="pagina" href="paginaruben.html">HOJA DE VIDA RUBEN</a>
     <br>
     <br>
     <a class="pagina" href="paginamartha.html">HOJA DE VIDA MARTHA</a>
-    </div>
+    <form action="">
+    <button id="limpiar">Limpiar</button>
+  </form>
+  </div>
+<dialog id="captura">
+  <form  method="post">
+    Ingrese su Nombre: <input type="text" name="nombre" id="nombre" value="">
+    <br>
+    <input id="btning" type="submit">
+</form>
+</dialog>
 
   <div class="container">
     <h1>Juego de Piedra, Papel o Tijera</h1>
@@ -33,10 +42,10 @@
    <img src="images/Robot.png" alt="animacion3">
   </div>
   <div class="animacion1">
-   <img class="img2" src="images/DosRobots.png" alt="animacion4">
+   <img class="img2" src="images/drone.png" alt="animacion4">
   </div>
    </div>
-
+   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/codigo.js"></script>
 </body>
 </html>
