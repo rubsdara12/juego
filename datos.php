@@ -2,8 +2,6 @@
 //echo $_POST['$nombre'];
 $extract = ($_POST);
 include("conexion.php");
-//$conexion = new Conexion();
-//$conexion->conectar();
 $nombre = $_POST["nombre"];
 $resultado = $_POST["resultado"];
 

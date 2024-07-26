@@ -9,25 +9,34 @@
   
 </head>
 <body>
-<h1>PROYECTO FINAL DESARROLLO FULL STACK</h1>
+  <h1>PROYECTO FINAL DESARROLLO FULL STACK</h1>
   <div class="hv">
     <a class="pagina" href="paginaruben.html">HOJA DE VIDA RUBEN</a>
     <br>
     <br>
     <a class="pagina" href="paginamartha.html">HOJA DE VIDA MARTHA</a>
     <form action="">
-    <button id="limpiar">Limpiar</button>
-    <button id="Marcador">Ver Marcador</button>
-  </form>
-
-
+      <button id="limpiar">Ingresar otro usuario</button>
+      <button id="Marcador">Ver Marcador</button>
+    </form>
   </div>
-<dialog id="captura">
+
+
+  <dialog id="showdata">
+    <form  method="post">
+      <div id="mensaje"></div>
+      <!-- <input type="text" name="rtaconsulta" id="rtaconsulta" value=""> -->
+      <br>
+      <input id="cerrar" type="submit" value="cerrrar">
+    </form>
+  </dialog>
+
+  <dialog id="captura">
   <form  method="post">
-    Ingrese su Nombre: <input type="text" name="nombre" id="nombre" value="">
+    Ingrese su Nombre: <input type="text" name="nombre" id="nombre" value="" required>
     <br>
-    <input id="btning" type="submit">
-</form>
+    <input id="btning" type="submit" value="Enviar">
+  </form>
 </dialog>
 
   <div class="container">

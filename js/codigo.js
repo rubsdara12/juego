@@ -1,8 +1,17 @@
 const cerrar = document.getElementById("btning");
 const captura = document.getElementById("captura");
+const showdata = document.getElementById("showdata");
 let usuario= document.getElementById("nombre").value;
-// alert (localStorage.getItem("usuario"));
 
+
+
+if (localStorage.getItem("consulta") == "si"){
+   showdata.showModal();
+   $("#mensaje").html(localStorage.getItem("resultado"));
+   delete localStorage.consulta;
+ }
+  
+  
 if (localStorage.getItem("usuario") == null) {window.onload = function() { 
   // también se puede usar window.addEventListener('load', (event) => {
   captura.showModal();
@@ -14,18 +23,25 @@ $("#limpiar").on("click",function(){
 });
 
 // const marcador = document.getElementById("Marcador");
-// marcador.addEventListener("click", function() {
-//   //let resultado= "nombre="+localStorage.getItem("usuario")+"&resultado="+gana;
-//     // alert (datos);
-//     $.ajax({
-//       //method: "POST",
-//       url: "datos.php",
-//       data: datos,
-//     })
-// }
 
+$("#Marcador").on("click",function(){
+    $.ajax({
+      url: "traerdatos.php",
+     }).done(function(rtaphp){
 
-  cerrar.addEventListener('click',function(){
+      // $("#mensaje").html(rtaphp);
+      localStorage.setItem("consulta", "si");
+      localStorage.setItem("resultado", rtaphp);
+      showdata.showModal();
+      timeout: 2000000;
+      // alert (rtaphp);
+      }).fail(function() {
+        alert('Error');})
+  alert("pulse aceptar para continuar");
+
+ });
+
+cerrar.addEventListener('click',function(){
   usuario= document.getElementById("nombre").value;
   localStorage.setItem("usuario", usuario);
   captura.close();
